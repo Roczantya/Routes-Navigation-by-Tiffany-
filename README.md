@@ -1,16 +1,62 @@
-# navigation_codelab
+# Routes-Navigator App
+  Aplikasi Flutter sederhana untuk navigasi antar layar dengan fitur UI kustom, termasuk bottom navigation bar, drawer, dan rute-rute yang mudah digunakan.
 
-A new Flutter project.
+## Fitur
+- `Bottom Navigation Bar` untuk navigasi antar layar (Home, Search, dan Profile).
+- `Drawer Menu` untuk navigasi tambahan, seperti Settings dan First Screen.
+- Tombol AppBar untuk kembali ke layar sebelumnya.
+- Tombol dinamis untuk berpindah antar layar.
+  
+## Persyaratan
+Sebelum memulai, pastikan Anda telah memenuhi persyaratan berikut:
+  1. Install Flutter (disarankan versi 3.x atau lebih baru).
+  2. Pastikan lingkungan Flutter Anda sudah siap:
+     - Jalankan `flutter doctor` di terminal untuk memastikan semua komponen telah terinstal dengan benar.
 
-## Getting Started
+## Instalasi
+1. Clone repositori ini ke komputer Anda:
+  ```bash
+  git clone https://github.com/Roczantya/Routes-Navigation-by-Tiffany-.git
+  cd Routes-Navigation-by-Tiffany
+  ```
+2. Instal semua dependensi yang diperlukan:
+  ```bash
+  flutter pub get
+  ```
+3. Jalankan aplikasi:
+  ```bash
+  flutter run
+  ```
 
-This project is a starting point for a Flutter application.
+## Penggunaan
+  ### Navigasi
+  1. __Home Screen__
+     - Layar default saat aplikasi dibuka.
+     - Terdapat tombol untuk menuju First Screen atau membuka dialog.
+  2. Bottom Navigation Bar
+     - Gunakan ikon di bagian bawah layar untuk berpindah antar layar: Home, Search, dan Profile.
+  3. Drawer Menu
+     - Akses menu dengan mengetuk ikon hamburger di kiri atas AppBar.
+     - Pilih salah satu menu untuk menuju layar yang diinginkan.
+  4. Tombol Kembali di AppBar
+     - Pada layar Third Screen, tombol ini akan membawa Anda kembali ke First Screen.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Screenshot
+  1. Halaman Utama
+  2. Bottom Navigation Bar
+  3. Halaman Pertama 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Struktur Folder
+  Struktur folder aplikasi mengikuti format standar Flutter:
+
+```plaintext
+lib/
+├── main.dart           # Titik masuk aplikasi dan widget pada bottom navigasi bar
+├── first_screen.dart   # Logika dan UI layar pertama
+├── second_screen.dart  # Logika dan UI layar kedua
+├── third_screen.dart   # Logika dan UI layar ketiga
+```
+
+## Lisensi
+  Proyek ini dilisensikan di bawah Lisensi MIT. Lihat file LICENSE untuk detail lebih lanjut.
