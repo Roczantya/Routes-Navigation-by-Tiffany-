@@ -43,9 +43,26 @@ Sebelum memulai, pastikan Anda telah memenuhi persyaratan berikut:
 
 
 ## Screenshot
-  1. Halaman Utama
-  2. Bottom Navigation Bar
-  3. Halaman Pertama 
+  1. **Halaman Utama**
+     
+     ![halamanutama](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20121931.png)
+     
+  2. **Bottom Navigation Bar**
+          
+     ![Menu](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20121931.png)
+     
+  3. **Halaman Pertama**
+      
+     ![Halaman pertama](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20121956.png)
+     
+  4. **Halaman Kedua**
+     
+     ![Halaman Kedua](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20122014.png)
+     
+  5. **Halaman Ketiga**
+
+     ![Halaman Ketiga](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20122106.png)
+
 
 ## Struktur Folder
   Struktur folder aplikasi mengikuti format standar Flutter:
