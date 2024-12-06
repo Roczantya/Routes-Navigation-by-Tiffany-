@@ -1,8 +1,8 @@
 # Routes-Navigator App
-  Aplikasi Flutter sederhana untuk navigasi antar layar dengan fitur UI kustom, termasuk bottom navigation bar, drawer, dan rute-rute yang mudah digunakan.
+  Aplikasi Flutter sederhana untuk navigasi antar layar dengan fitur UI kustom, termasuk bottom navigation bar, dan rute-rute yang mudah digunakan.
 
 ## Fitur
-- `Bottom Navigation Bar` untuk navigasi antar layar (Home, Search, dan Profile).
+- `Bottom Navigation Bar` untuk navigasi antar layar (Home, Search, Settings dan Profile).
 - `Drawer Menu` untuk navigasi tambahan, seperti Settings dan First Screen.
 - Tombol AppBar untuk kembali ke layar sebelumnya.
 - Tombol dinamis untuk berpindah antar layar.
@@ -34,18 +34,32 @@ Sebelum memulai, pastikan Anda telah memenuhi persyaratan berikut:
      - Layar default saat aplikasi dibuka.
      - Terdapat tombol untuk menuju First Screen atau membuka dialog.
   2. Bottom Navigation Bar
-     - Gunakan ikon di bagian bawah layar untuk berpindah antar layar: Home, Search, dan Profile.
-  3. Drawer Menu
-     - Akses menu dengan mengetuk ikon hamburger di kiri atas AppBar.
-     - Pilih salah satu menu untuk menuju layar yang diinginkan.
-  4. Tombol Kembali di AppBar
+     - Gunakan ikon di bagian bawah layar untuk berpindah antar layar: Home, Search, Settings dan Profile.
+  3. Tombol Kembali di AppBar
      - Pada layar Third Screen, tombol ini akan membawa Anda kembali ke First Screen.
 
 
 ## Screenshot
-  1. Halaman Utama
-  2. Bottom Navigation Bar
-  3. Halaman Pertama 
+  1. **Halaman Utama**
+     
+     ![halamanutama](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20121931.png)
+     
+  2. **Bottom Navigation Bar**
+          
+     ![Menu](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20121931.png)
+     
+  3. **Halaman Pertama**
+      
+     ![Halaman pertama](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20121956.png)
+     
+  4. **Halaman Kedua**
+     
+     ![Halaman Kedua](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20122014.png)
+     
+  5. **Halaman Ketiga**
+
+     ![Halaman Ketiga](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20122106.png)
+
 
 ## Struktur Folder
   Struktur folder aplikasi mengikuti format standar Flutter:
