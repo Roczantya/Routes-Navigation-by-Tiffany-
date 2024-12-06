@@ -3,8 +3,7 @@
 
 ## Fitur
 - `Bottom Navigation Bar` untuk navigasi antar layar (Home, Search, Settings dan Profile).
-- `Drawer Menu` untuk navigasi tambahan, seperti Settings dan First Screen.
-- Tombol AppBar untuk kembali ke layar sebelumnya.
+- Tombol AppBar untuk kembali ke layar utama.
 - Tombol dinamis untuk berpindah antar layar.
   
 ## Persyaratan
@@ -33,34 +32,30 @@ Sebelum memulai, pastikan Anda telah memenuhi persyaratan berikut:
   1. __Home Screen__
      - Layar default saat aplikasi dibuka.
      - Terdapat tombol untuk menuju First Screen atau membuka dialog.
-  2. Bottom Navigation Bar
-     - Gunakan ikon di bagian bawah layar untuk berpindah antar layar: Home, Search, Settings dan Profile.
-  3. Tombol Kembali di AppBar
-     - Pada layar Third Screen, tombol ini akan membawa Anda kembali ke First Screen.
+  2. __Bottom Navigation Bar__
+     - Gunakan ikon di bagian bawah layar untuk berpindah antar layar: `HomeScreen`, `FirstScreen`. `Secondscreen`, dan `ThirdScreen`
+  3. __Tombol Kembali di AppBar__
+     - Pada layar `First Screen`, `Second Screen` dan `Third Screen`, tombol ini akan membawa Anda kembali ke First Screen.
+       
+## Challenge(Tantangan)
+  - Pada `Appbar` di __SecondScreen__ dan __ThirdScreen__, sempat tidak mau kembali ke halaman utama
+  - Pada `BottoomNavigationBar`, icon yang digunakan untuk berpindah halaman tidak bisa berpindah ke halaman  `FirstScreen`. `Secondscreen`, dan `ThirdScreen`
+    
+## Approach (Pendekatan)
+  - Untuk masalah pertama, pendekatan yang klakukan memberikan `leanding` yang berfungsi untuk membuat Icon Arrowback bisa berpindah ke halaman dashboard
+  - Untuk masalah kedua, saya membuat route tersendiri guna dapat memudahkan menampilkan membuat navigasi antar screen. jadi pemanggilannya akan seperti ini  ini memudahkan dalam memuat halaman screen. Contoh code:
+ ``` bash
+  initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/first': (context) => const FirstScreen(),
+        '/second': (context) => const SecondScreen(),
+        '/third': (context) => const ThirdScreen(),
+      },
+```
+  - Untuk masalah  `BottoomNavigationBar`, `final List<Widget> _pages` ini adalah pemanggilan list widget yang berfungsi untuk menampilkan screen pada halaman yang dipilih. `body: _pages[_selectedIndex],` ini akan memanggil list widget berdasarkan index yang dipilih pada `BottoomNavigationBar`. Jika indeksnya adalah 0, maka HomePage akan ditampilkan, jika 1, maka FirstScreen yang ditampilkan, dan seterusnya.
 
-
-## Screenshot
-  1. **Halaman Utama**
-     
-     ![halamanutama](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20121931.png)
-     
-  2. **Bottom Navigation Bar**
-          
-     ![Menu](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20121931.png)
-     
-  3. **Halaman Pertama**
-      
-     ![Halaman pertama](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20121956.png)
-     
-  4. **Halaman Kedua**
-     
-     ![Halaman Kedua](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20122014.png)
-     
-  5. **Halaman Ketiga**
-
-     ![Halaman Ketiga](https://github.com/Roczantya/Routes-Navigation-by-Tiffany-/blob/master/images/Screenshot%202024-12-05%20122106.png)
-
-
+    
 ## Struktur Folder
   Struktur folder aplikasi mengikuti format standar Flutter:
 
@@ -71,6 +66,3 @@ lib/
 ├── second_screen.dart  # Logika dan UI layar kedua
 ├── third_screen.dart   # Logika dan UI layar ketiga
 ```
-
-## Lisensi
-  Proyek ini dilisensikan di bawah Lisensi MIT. Lihat file LICENSE untuk detail lebih lanjut.
