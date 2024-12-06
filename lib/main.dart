@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'first_screen.dart';
+import 'second_screen.dart';
+import 'third_screen.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Navigation Codelab',
-      home: HomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/first': (context) => const FirstScreen(),
+        '/second': (context) => const SecondScreen(),
+        '/third': (context) => const ThirdScreen(),
+      },
     );
   }
 }
@@ -25,10 +33,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // List of pages for Bottom Navigation Bar
   final List<Widget> _pages = [
-    const HomePage(),
-    const SearchScreen(),
-    const ProfileScreen(),
-    const SettingsScreen(),
+    const HomePage(), // Menampilkan HomePage di tab pertama
+    const FirstScreen(),
+    const SecondScreen(),
+    const ThirdScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -40,14 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.lightBlue,
-        title: const Text('Home Screen '),
-      ),
-      body: IndexedStack(
-        index: _selectedIndex,
-        children: _pages,
-      ),
+      body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.blue,
@@ -97,63 +98,11 @@ class HomePage extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               // Navigate to FirstScreen
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const FirstScreen()),
-              );
+              Navigator.pushNamed(context, '/first');
             },
             child: const Text('Go to First Screen'),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class SearchScreen extends StatelessWidget {
-  const SearchScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Search Screen'),
-      ),
-      body: const Center(
-        child: Text('This is the Search Page', style: TextStyle(fontSize: 20)),
-      ),
-    );
-  }
-}
-
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profile Screen'),
-      ),
-      body: const Center(
-        child: Text('This is the Profile Page', style: TextStyle(fontSize: 20)),
-      ),
-    );
-  }
-}
-
-class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Settings Screen'),
-      ),
-      body: const Center(
-        child:
-            Text('This is the Settings Page', style: TextStyle(fontSize: 20)),
       ),
     );
   }

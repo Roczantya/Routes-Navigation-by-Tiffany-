@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'second_screen.dart';
-import 'first_screen.dart';
 
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({super.key});
@@ -13,10 +11,7 @@ class ThirdScreen extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const FirstScreen()),
-            );
+            Navigator.pushNamed(context, '/');
           },
         ),
       ),
@@ -27,10 +22,7 @@ class ThirdScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Return to the first screen.
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const SecondScreen()));
+                Navigator.pushNamed(context, '/first');
               },
               child: const Text('Go Back to Second Screen'),
             ),
@@ -39,10 +31,7 @@ class ThirdScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Navigate to the second screen.
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ThirdScreen()));
+                Navigator.pushNamed(context, '/third');
               },
               child: const Text('Go to Third Screen'),
             ),
